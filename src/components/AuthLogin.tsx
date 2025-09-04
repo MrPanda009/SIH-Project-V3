@@ -62,7 +62,7 @@ export default function AuthLogin({ onLoginSuccess, onSwitchToSignup }: AuthLogi
     const otp = Math.floor(100000 + Math.random() * 900000).toString()
     setGeneratedOtp(otp)
     
-    console.log(`🔐 Login OTP (FOR TESTING ONLY): ${otp}`) // Log for easy testing
+    alert("🔐 Login OTP :" + otp) // Log for easy testing
     setStep(2)
     setError('')
   }
