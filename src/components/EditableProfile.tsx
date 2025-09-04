@@ -115,7 +115,7 @@ export default function EditableProfile({ user, onUpdate }: EditableProfileProps
       const mockOtp = Math.floor(100000 + Math.random() * 900000).toString()
       
       // In real implementation, send email via backend
-      console.log('🔐 Profile Update OTP (FOR TESTING ONLY):', mockOtp)
+      alert('🔐 Profile Update OTP :' + mockOtp)
       
       setOtpSent(true)
       setOtpCountdown(60) // 60 second countdown
