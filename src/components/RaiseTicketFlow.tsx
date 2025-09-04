@@ -9,8 +9,6 @@ import { Alert, AlertDescription } from './ui/alert'
 import { Badge } from './ui/badge'
 import { Camera, Upload, MapPin, CheckCircle, ArrowLeft, X } from 'lucide-react'
 import { ticketsAPI, uploadAPI } from '../utils/api'
-import opencage, { geocode } from 'opencage-api-client';
-import type { GeocodingRequest, GeocodingResponse } from 'opencage-api-client';
 
 interface RaiseTicketFlowProps {
   onSuccess: () => void
@@ -59,39 +57,28 @@ export default function RaiseTicketFlow({ onSuccess, onCancel }: RaiseTicketFlow
     setLocationLoading(true)
     setError('')
 
-     if (navigator.geolocation) {
+    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
           const { latitude, longitude } = position.coords
-          const opencagekey = '3d55f322619442a49ab49f48dfb7dfe5';
-
-          async function getdigipin() {
-            try {
-              const request: GeocodingResponse = await opencage.geocode({q: `${latitude}, ${longitude}`, key: opencagekey});
-              if (request.results.length > 0) {
-                const place = request.results[0];
-                const DIGIPIN = place.annotations?.DIGIPIN;
-                const adr = place.formatted; 
-                return {DIGIPIN , adr} ;
-              }
-              return null;
-            } catch (err) {
-              console.error('Error fetching DIGIPIN:', err);
-              return null;
-            }
-          }
-
           
-          // In a real app, you'd reverse geocode to get address and ward
-          // For demo, we'll create mock data
-          const digipinresult = await getdigipin();
-          const realLocation = {
-            lat: latitude,
-            lng: longitude,
-            address: digipinresult?.adr,
-            ward: `Ward ${Math.floor(Math.random() * 50) + 1}`,
-            digiPin: digipinresult?.DIGIPIN
-          }
+          try {
+            // --- REAL REVERSE GEOCODING ---
+            const response = await fetch(
+              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+            )
+            if (!response.ok) {
+              throw new Error('Failed to fetch address.')
+            }
+            const data = await response.json()
+            
+            const locationData = {
+              lat: latitude,
+              lng: longitude,
+              address: data.display_name || `${latitude.toFixed(4)}, ${longitude.toFixed(4)}`,
+              ward: `Ward ${Math.floor(Math.random() * 50) + 1}`,
+              digiPin: `DG${Math.floor(Math.random() * 1000000)}`
+            }
             
             setTicketData(prev => ({ ...prev, location: locationData }))
 
