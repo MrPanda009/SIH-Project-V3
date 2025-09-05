@@ -140,7 +140,7 @@ export default function NotificationCenter({ userRole, userId }: NotificationCen
           </div>
         )}
 
-        <ScrollArea className="flex-1 max-h-96">
+        <ScrollArea className="overflow-y-auto flex-1 max-h-96">
           {notifications.length === 0 ? (
             <div className="text-center py-8">
               <Bell className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
