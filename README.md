@@ -1,4 +1,4 @@
-# 🏛️ Civic Issue Reporting Platform V2
+# ![Logo](logo-126.png) Samadhaan Setu V3
 ### *Empowering Citizens to Build Better Communities*
 
 <div align="center">
@@ -17,7 +17,7 @@
 
 ## 📖 About The Project
 
-The **Civic Issue Reporting Platform** is a modern web application designed to bridge the gap between citizens and local authorities. This platform enables community members to report civic issues, track their resolution status, and actively participate in improving their neighborhoods.
+The **Samadhaan Setu** is a modern web application designed to bridge the gap between citizens and local authorities. This platform enables community members to report civic issues, track their resolution status, and actively participate in improving their neighborhoods.
 
 ### 🎯 Problem Statement
 Citizens often struggle to report civic issues like potholes, broken streetlights, or garbage collection problems to the appropriate authorities. Traditional reporting methods are inefficient, lack transparency, and provide no feedback mechanism.
