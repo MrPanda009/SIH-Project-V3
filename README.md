@@ -59,7 +59,7 @@ A user-friendly digital platform that streamlines the entire issue reporting pro
 ## 🔄 How It Works
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[👤 Citizen] -->|Reports Issue| B[📝 Issue Form]
     B --> C{📷 Add Photo/Location?}
     C -->|Yes| D[📸 Upload Media]
