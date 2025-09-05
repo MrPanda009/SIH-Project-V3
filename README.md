@@ -36,7 +36,7 @@ A user-friendly digital platform that streamlines the entire issue reporting pro
 ### 📱 For Citizens
 - **Easy Issue Reporting** - Report issues with photos and location
 - **Real-time Tracking** - Monitor issue resolution progress
-- **Community Engagement** - Upvote and comment on reported issues
+- **Community Engagement** - Upvote on reported issues
 - **Push Notifications** - Get updates on your reports
 - **Issue Categories** - Organized reporting system
 
@@ -45,45 +45,14 @@ A user-friendly digital platform that streamlines the entire issue reporting pro
 
 ### 🏢 For Authorities
 - **Dashboard Analytics** - Comprehensive overview of issues
-- **Priority Management** - AI-powered issue prioritization
+- **Priority Management** - Voting based issue prioritization
 - **Department Routing** - Automatic assignment to relevant teams
 - **Performance Metrics** - Track resolution times and efficiency
-- **Resource Allocation** - Data-driven decision making
 
 </td>
 </tr>
 </table>
 
----
-
-## 🔄 How It Works
-
-```mermaid
-flowchart LR
-    A[👤 Citizen] -->|Reports Issue| B[📝 Issue Form]
-    B --> C{📷 Add Photo/Location?}
-    C -->|Yes| D[📸 Upload Media]
-    C -->|No| E[✍️ Text Description]
-    D --> F[🔄 Submit Issue]
-    E --> F
-    F --> G[🤖 AI Categorization]
-    G --> H[📊 Admin Dashboard]
-    H --> I[👥 Department Assignment]
-    I --> J[🔧 Issue Resolution]
-    J --> K[✅ Status Update]
-    K --> L[📱 Citizen Notification]
-    L --> M{😊 Satisfied?}
-    M -->|Yes| N[⭐ Rate & Close]
-    M -->|No| O[💬 Add Feedback]
-    O --> I
-    
-    style A fill:#e1f5fe
-    style N fill:#c8e6c9
-    style G fill:#fff3e0
-    style H fill:#fce4ec
-```
-
----
 
 ## 🚀 Quick Start
 
@@ -144,69 +113,35 @@ SIH-Project-V2/
 
 | Category | Technologies |
 |----------|-------------|
-| **Frontend** | React.js, Redux, Material-UI, Tailwind CSS |
-| **Backend** | Node.js, Express.js, MongoDB |
-| **Authentication** | JWT, OAuth 2.0 |
-| **Maps** | Google Maps API / Mapbox |
-| **Cloud** | AWS S3 (Media Storage) |
-| **Real-time** | Socket.io |
-| **Analytics** | Chart.js, D3.js |
+| **Frontend** | React.js, Tailwind CSS, HTML, Typescript |
+| **Backend** | Node.js, Supabase DB |
+| **Authentication** | Supabase auth |
+| **Maps** | Open Street Maps API |
+| **Cloud** | Supabase storage |
 
 </div>
-
----
-
-## 📸 Screenshots
-
-<details>
-<summary>Click to view screenshots</summary>
-
-### 🏠 Homepage
-> Clean and intuitive landing page with quick access to report issues
-
-### 📝 Issue Reporting
-> Simple form with location picker and image upload
-
-### 📊 Admin Dashboard
-> Comprehensive analytics and issue management interface
-
-### 📱 Mobile Responsive
-> Fully responsive design for all devices
-
-</details>
-
----
-
-## 🎨 Design System
-
-Our platform follows a modern, accessible design system:
-
-- **🎨 Figma Design**: [View Design System](https://www.figma.com/design/Y2gFzZTbTSK5hCMUxGnAnN/Civic-Issue-Reporting-Platform)
-- **🌈 Color Palette**: Primary Blue (#2196F3), Success Green (#4CAF50), Warning Orange (#FF9800)
-- **📝 Typography**: Inter for headings, Roboto for body text
-- **♿ Accessibility**: WCAG 2.1 AA compliant
 
 ---
 
 ## 🗺️ Roadmap
 
 ### Phase 1: Core Features ✅
-- [x] User authentication
-- [x] Issue reporting system
-- [x] Basic dashboard
+- [x] User Authentication
+- [x] Issue Reporting System
+- [x] Basic Dashboard
 
 ### Phase 2: Enhanced Features 🚧
-- [ ] AI-powered issue categorization
+- [x] Progressive Web App(PWA) / mobile app functionality
+- [x] SHA-265 Encryption
+- [x] Digipin Integration
+- [ ] Dark Mode
+- [ ] Heat Map
 - [ ] Multi-language support
-- [ ] Mobile application
-- [ ] Advanced analytics
 
-### Phase 3: Advanced Integration 📅
-- [ ] IoT sensor integration
-- [ ] Predictive maintenance
-- [ ] Blockchain for transparency
-- [ ] Government API integration
-
+### Phase 3: Advanced Integrations 📅
+- [ ] Advanced Analytics
+- [ ] AI driven fake ticket detection
+- [ ] Spam Protection
 ---
 
 ## 🤝 Contributing
@@ -233,28 +168,6 @@ We welcome contributions from the community! Here's how you can help:
 - Follow existing code style
 - Add unit tests for new features
 - Update documentation as needed
-
----
-
-## 👥 Team
-
-<div align="center">
-
-| Role | Responsibilities |
-|------|-----------------|
-| **Frontend Developer** | UI/UX implementation, React components |
-| **Backend Developer** | API development, Database design |
-| **UI/UX Designer** | Design system, User research |
-| **DevOps Engineer** | Deployment, CI/CD pipeline |
-| **Project Manager** | Coordination, Timeline management |
-
-</div>
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -289,7 +202,7 @@ If you find this project helpful, please consider giving it a star!
 
 <div align="center">
 
-### 🏆 Built for Smart India Hackathon 2024
+### 🏆 Built for Smart India Hackathon 2025
 
 **Making Indian Cities Smarter, One Issue at a Time** 🇮🇳
 
