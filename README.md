@@ -1,4 +1,4 @@
-# ![Logo](logo-126.jpg) Samadhaan Setu V3
+# ![Logo](/logo-128.jpg) Samadhaan Setu V3
 ### *Empowering Citizens to Build Better Communities*
 
 <div align="center">
