@@ -39,7 +39,7 @@ export default function Footer() {
               Contact Support
             </button>
             <div className="text-sm text-muted-foreground">
-              Civic Issue Reporting Platform
+              Sannadhaan Setu - A Civic Issue Reporting Platform
             </div>
           </div>
           <div className="text-xs text-muted-foreground text-center">
